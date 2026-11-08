@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Mokhtar | PrimaLAB Digital Transformation Proposal</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Montserrat:wght@400;600;700;800&display=swap');
+
+        :root {
+            --navy: #102B40;
+            --navy2: #173F55;
+            --teal: #13A89E;
+            --teal-light: #DDF5F1;
+            --gold: #D9AD61;
+            --ink: #263746;
+            --muted: #70818D;
+            --bg: #F3F6F8;
+            --white: #FFFFFF;
+            --line: #E2E9ED;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            background: #E8EDF0;
+            color: var(--ink);
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.9;
+            font-size: 20px;
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 25px auto;
+            background: white;
+            padding: 19mm 18mm 21mm;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 30px #172e401c;
+            page-break-after: always;
+        }
+
+        .page:after {
+            content: "PRIMALAB PLTC";
+            position: absolute;
+            top: 45%;
+            left: 10%;
+            font-family: Montserrat;
+            font-size: 65px;
+            font-weight: 800;
+            color: rgba(19, 168, 158, .035);
+            transform: rotate(-35deg);
+            pointer-events: none;
+        }
+
+        .cover {
+            padding: 0;
+            background: var(--navy);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .cover:before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border: 1px solid #ffffff20;
+            border-radius: 50%;
+            top: 15%;
+            right: -180px;
+            box-shadow: 0 0 0 45px #ffffff08, 0 0 0 90px #ffffff05;
+        }
+
+        .cover:after {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: var(--teal);
+            opacity: .12;
+            border-radius: 50%;
+            left: -120px;
+            bottom: 70px;
+            filter: blur(5px);
+        }
+
+        .cover-top {
+            padding: 25mm 20mm 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .brand {
+            font-family: Montserrat;
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: white;
+        }
+
+        .brand span {
+            color: #36C5B9
+        }
+
+        .brand-sub {
+            font-size: 11px;
+            color: #B9D1DA;
+            letter-spacing: 2px;
+            direction: ltr;
+            text-align: right;
+        }
+
+        .gold-line {
+            width: 80px;
+            height: 4px;
+            background: var(--gold);
+            margin: 35px 0;
+        }
+
+        .cover h1 {
+            font-size: 39px;
+            line-height: 1.5;
+            font-weight: 900;
+            margin: 0;
+        }
+
+        .cover h1 span {
+            color: #49D0C2
+        }
+
+        .cover-description {
+            font-size: 17px;
+            color: #D4E2E8;
+            margin-top: 20px;
+            max-width: 480px;
+        }
+
+        .cover-middle {
+            margin-top: 45px;
+            border-right: 3px solid var(--gold);
+            padding-right: 18px;
+            color: #E3EDF0;
+        }
+
+        .cover-bottom {
+            background: #0B2031;
+            padding: 17mm 20mm;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cover-bottom strong {
+            color: #51C8BD;
+        }
+
+        .cover-meta {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            font-size: 20px;
+            color: #B8CCD4;
+        }
+
+        .cover-tag {
+            display: inline-block;
+            background: #FFFFFF12;
+            border: 1px solid #FFFFFF30;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 11px;
+            margin-bottom: 20px;
+            color: #80DED4;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--line);
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+        }
+
+        .page-header .logo {
+            font-family: Montserrat;
+            font-weight: 800;
+            color: var(--navy);
+            font-size: 17px;
+        }
+
+        .page-header .logo span {
+            color: var(--teal)
+        }
+
+        .page-number {
+            font-size: 11px;
+            color: var(--muted);
+            direction: ltr;
+        }
+
+        h2 {
+            color: var(--navy);
+            font-size: 25px;
+            font-weight: 900;
+            margin: 10px 0;
+        }
+
+        h3 {
+            color: var(--navy2);
+            font-size: 20px;
+            margin: 17px 0 7px;
+        }
+
+        p {
+            margin: 7px 0 12px
+        }
+
+        .eyebrow {
+            color: var(--teal);
+            font-family: Montserrat;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            direction: ltr;
+            text-align: right;
+        }
+
+        .intro {
+            color: var(--muted);
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 25px 0 14px;
+        }
+
+        .section-title .number {
+            background: var(--navy);
+            color: white;
+            width: 35px;
+            height: 35px;
+            display: grid;
+            place-items: center;
+            border-radius: 9px;
+            font-family: Montserrat;
+            font-size: 13px;
+        }
+
+        .section-title h3 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .card {
+            background: #F6F9FA;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 14px;
+        }
+
+        .card h3 {
+            margin: 0 0 6px
+        }
+
+        .card p {
+            font-size: 12px;
+            color: var(--muted);
+            margin: 0;
+        }
+
+        .card .icon {
+            color: var(--teal);
+            font-size: 21px;
+            margin-bottom: 5px;
+        }
+
+        .highlight {
+            background: var(--navy);
+            color: white;
+            border-radius: 13px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .highlight h3 {
+            color: #54D0C4;
+            margin-top: 0
+        }
+
+        .highlight p {
+            color: #D4E2E8;
+            font-size: 20px
+        }
+
+        .note {
+            border-right: 4px solid var(--teal);
+            background: var(--teal-light);
+            padding: 13px 16px;
+            border-radius: 8px;
+            font-size: 16px;
+            margin: 15px 0;
+        }
+
+        .warning {
+            border-right: 4px solid var(--gold);
+            background: #FFF8EC;
+            padding: 13px 16px;
+            border-radius: 8px;
+            font-size: 16px;
+            margin: 15px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 16px;
+        }
+
+        th {
+            background: var(--navy);
+            color: white;
+            padding: 10px;
+            text-align: right;
+        }
+
+        td {
+            border-bottom: 1px solid var(--line);
+            padding: 9px;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background: #F6F9FA
+        }
+
+        ul,
+        ol {
+            padding-right: 23px
+        }
+
+        li {
+            margin: 5px 0;
+            font-size: 20px
+        }
+
+        .tag {
+            display: inline-block;
+            background: #E5F5F3;
+            color: #138E85;
+            border-radius: 20px;
+            padding: 3px 10px;
+            font-size: 16px;
+            margin: 3px;
+        }
+
+        .sitemap {
+            background: #F4F8FA;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 15px;
+            direction: ltr;
+            text-align: left;
+            font-family: monospace;
+            white-space: pre-wrap;
+            font-size: 16px;
+            color: var(--navy);
+            line-height: 1.8;
+        }
+
+        .flow {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .flow-item {
+            background: var(--navy);
+            color: white;
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .flow-arrow {
+            color: var(--teal);
+            font-weight: bold
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 10mm;
+            right: 18mm;
+            left: 18mm;
+            border-top: 1px solid var(--line);
+            padding-top: 8px;
+            display: flex;
+            justify-content: space-between;
+            color: #93A1AA;
+            font-size: 16px;
+        }
+
+        .footer strong {
+            color: var(--teal)
+        }
+
+        .ltr {
+            direction: ltr;
+            text-align: left;
+            font-family: Montserrat, sans-serif;
+        }
+
+        .small {
+            font-size: 11px;
+            color: var(--muted)
+        }
+
+        .toc-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed #CCD8DE;
+            padding: 9px 0;
+            font-size: 20px;
+        }
+
+        .toc-item span:last-child {
+            color: var(--teal);
+            font-family: Montserrat;
+            font-weight: 700;
+        }
+
+        .status {
+            background: #E2F5EE;
+            color: #16845F;
+            border-radius: 15px;
+            padding: 3px 10px;
+            font-size: 10px;
+        }
+
+        @media print {
+            body {
+                background: white
+            }
+
+            .page {
+                margin: 0;
+                width: 210mm;
+                min-height: 297mm;
+                box-shadow: none;
+                page-break-after: always;
+                break-after: page;
+            }
+
+            .no-print {
+                display: none
+            }
+
+            @page {
+                size: A4;
+                margin: 0
+            }
+        }
+
+        @media screen and (max-width:800px) {
+            .page {
+                width: 100%;
+                min-height: 100vh;
+                margin: 0 0 15px;
+                padding: 25px;
+            }
+
+            .cover {
+                padding: 0
+            }
+
+            .cover-top {
+                padding: 45px 30px 0
+            }
+
+            .cover-bottom {
+                padding: 35px 30px
+            }
+
+            .cover h1 {
+                font-size: 30px
+            }
+
+            .footer {
+                position: relative;
+                bottom: auto;
+                margin-top: 35px;
+                left: auto;
+                right: auto
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .print-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 100;
+            background: var(--teal);
+            color: white;
+            border: 0;
+            padding: 13px 23px;
+            border-radius: 30px;
+            font-family: Cairo;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 5px 20px #0002;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="print-btn no-print" onclick="window.print()">
+        ⬇ Save as PDF / طباعة
+    </button>
+
+    <!-- COVER -->
+    <section class="page cover">
+
+        <div class="cover-top">
+
+            <div class="brand">PRIMA<span>LAB</span></div>
+            <div class="brand-sub">
+                FOR SOFTWARE SOLOUTIONS, INFORMATION TECHNOLOGY & ARTIFICIAL INTELLIGENCE
+            </div>
+
+            <div class="gold-line"></div>
+
+            <div class="cover-tag">BUSINESS & TECHNOLOGY PROPOSAL</div>
+
+            <h1>
+                AL MOKHTAR<br>
+                <span>Digital Transformation</span><br>
+                & Website Revamp
+            </h1>
+
+            <p class="cover-description">
+                Comprehensive Website Analysis, Business Requirements,
+                Software Requirements Specification (SRS) &
+                Digital Development Strategy
+            </p>
+
+            <div class="cover-middle">
+                <strong>Prepared for</strong><br>
+                AL MOKHTAR SALT COMPANY
+                <br><br>
+                <strong>Prepared by</strong><br>
+                Eng. Dina El-Ziny<br>
+                PrimaLAB Academy & Software Solutions
+            </div>
+
+        </div>
+
+        <div class="cover-bottom">
+            <div class="cover-meta">
+                <div>
+                    <strong>PRIMALAB PLTC</strong><br>
+                    Software Solutions & Digital Innovation
+                </div>
+                <div class="ltr">
+                    PROJECT DOCUMENT<br>
+                    07 NOVEMBER 2026
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- CONTENTS -->
+    <section class="page">
+
+        <div class="page-header">
+            <div class="logo">PRIMA<span>LAB</span></div>
+            <div class="page-number">PROJECT DOCUMENT / 01</div>
+        </div>
+
+        <div class="eyebrow">DOCUMENT OVERVIEW</div>
+        <h2>محتويات الدراسة</h2>
+
+        <p class="intro">
+            هذا المستند يمثل دراسة تحليلية وفنية مبدئية لإعادة تصميم وتطوير
+            الموقع الإلكتروني لشركة المختار، وتحويله إلى منصة رقمية متكاملة
+            لإدارة المحتوى والمنتجات والعملاء وطلبات عروض الأسعار.
+        </p>
+
+       
+
+       
+
+        <div class="footer">
+            <span>PRIMALAB PLTC | AL MOKHTAR DIGITAL PROJECT</span>
+            <strong>CONFIDENTIAL PROPOSAL</strong>
+        </div>
+    </section>
+
+    <!-- EXECUTIVE SUMMARY -->
+    <section class="page">
+
+        <div class="page-header">
+            <div class="logo">PRIMA<span>LAB</span></div>
+            <div class="page-number">01 / EXECUTIVE SUMMARY</div>
+        </div>
+
+        <div class="eyebrow">01 — EXECUTIVE SUMMARY</div>
+        <h2>الملخص التنفيذي</h2>
+
+        <p>
+            شركة المختار تعمل في مجال إنتاج وتوريد وتصدير الملح بأنواعه،
+            وتحتاج إلى حضور رقمي يعكس قدراتها الصناعية والتجارية،
+            ويقدم منتجاتها بطريقة منظمة تساعد العملاء المحليين والدوليين
+            على التعرف على الشركة والتواصل معها بسهولة.
+        </p>
+
+        <p>
+            من خلال مراجعة الموقع الحالي almokhtar-egy.com،
+            تم تحديد مجموعة من فرص التطوير المتعلقة بتنظيم المحتوى،
+            وتحسين تجربة المستخدم، وتطوير عرض المنتجات،
+            وإضافة نظام لإدارة العملاء والطلبات.
+        </p>
+
+        <div class="card-grid">
+
+            <div class="card">
+                <div class="icon">01</div>
+                <h3>Corporate Identity</h3>
+                <p>تطوير الواجهة الرقمية لتعكس هوية شركة صناعية وتصديرية احترافية.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">02</div>
+                <h3>Product Management</h3>
+                <p>عرض المنتجات وتصنيفاتها ومواصفاتها الفنية بطريقة متكاملة.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">03</div>
+                <h3>Customer Experience</h3>
+                <p>توفير حسابات للعملاء ومتابعة الاستفسارات وطلبات الأسعار.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">04</div>
+                <h3>Business Administration</h3>
+                <p>لوحة إدارة مركزية للتحكم في الموقع والمنتجات والعملاء.</p>
+            </div>
+
+        </div>
+
+        <div class="section-title">
+            <div class="number">01</div>
+            <h3>الأهداف الاستراتيجية</h3>
+        </div>
+
+        <ul>
+            <li>تحسين صورة الشركة أمام العملاء والمستوردين.</li>
+            <li>تسهيل الوصول إلى المعلومات الفنية الخاصة بالمنتجات.</li>
+            <li>زيادة فرص استقبال العملاء المحتملين Lead Generation.</li>
+            <li>تنظيم دورة استقبال ومتابعة طلبات عروض الأسعار.</li>
+            <li>تقليل الاعتماد على التحديث اليدوي للموقع.</li>
+            <li>توفير بنية قابلة للتوسع مستقبلًا.</li>
+        </ul>
+
+        <div class="note">
+
+            <strong >المقترح الأساسي مستقبلا  </strong>
+            بناء Corporate Website متصل بنظام إدارة داخلي،
+            مع Customer Portal لإدارة الحسابات والاستفسارات والطلبات.
+        </div>
+
+        <div class="footer">
+            <span>PRIMALAB PLTC</span>
+            <strong>01</strong>
+        </div>
+    </section>
+
+    <!-- PROJECT UNDERSTANDING -->
+    <section class="page">
+
+        <div class="page-header">
+            <div class="logo">PRIMA<span>LAB</span></div>
+            <div class="page-number">02 / PROJECT UNDERSTANDING</div>
+        </div>
+
+        <div class="eyebrow">02 — BUSINESS UNDERSTANDING</div>
+        <h2>فهم طبيعة النشاط التجاري</h2>
+
+        <p>
+            قبل تحديد وظائف الموقع الجديد، يجب فهم طبيعة الشركة والمنتجات
+            والجمهور المستهدف؛ لأن الموقع الصناعي والتصديري له متطلبات
+            مختلفة عن المواقع التجارية التقليدية.
+        </p>
+
+        <h3>طبيعة نشاط الشركة</h3>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Salt Production</h3>
+                <p>إنتاج وتجهيز أنواع مختلفة من الملح.</p>
+            </div>
+            <div class="card">
+                <h3>Industrial Supply</h3>
+                <p>توفير الملح للاستخدامات الصناعية والتجارية.</p>
+            </div>
+            <div class="card">
+                <h3>Export Operations</h3>
+                <p>توريد المنتجات للعملاء والأسواق الخارجية.</p>
+            </div>
+            <div class="card">
+                <h3>Quality Assurance</h3>
+                <p>عرض المواصفات الفنية ومعايير الجودة والشهادات.</p>
+            </div>
+        </div>
+
+        <h3>الجمهور المستهدف (Target Audience)</h3>
+
+        <table>
+            <tr>
+                <th>الفئة</th>
+                <th>احتياجاتها من الموقع</th>
+            </tr>
+            <tr>
+                <td>Importers & Distributors</td>
+                <td>معلومات المنتجات والتعبئة والتصدير وطلب عروض الأسعار.</td>
+            </tr>
+            <tr>
+                <td>Food Manufacturers</td>
+                <td>مواصفات الملح الغذائي والنقاء ومعايير سلامة الغذاء.</td>
+            </tr>
+            <tr>
+                <td>Industrial Companies</td>
+                <td>المواصفات الكيميائية والاستخدامات الصناعية.</td>
+            </tr>
+            <tr>
+                <td>Water Treatment Companies</td>
+                <td>تفاصيل الملح المخصص لمعالجة المياه.</td>
+            </tr>
+            <tr>
+                <td>Swimming Pool Suppliers</td>
+                <td>تفاصيل Pool Salt والتعبئة والتوريد.</td>
+            </tr>
+            <tr>
+                <td>Local Customers</td>
+                <td>التواصل والاستفسار والوصول إلى المنتجات.</td>
+            </tr>
+        </table>
+
+        <div class="highlight">
+            <h3>Business Opportunity</h3>
+            <p>
+                الموقع الجديد يجب ألا يكون مجرد كتالوج إلكتروني،
+                بل نقطة اتصال رقمية تربط المنتجات بالعملاء،
+                وتحول الزيارات إلى استفسارات وفرص بيع قابلة للمتابعة.
+            </p>
+        </div>
+
+        <div class="footer">
+            <span>PRIMALAB PLTC</span>
+            <strong>02</strong>
+        </div>
+    </section>
+
+    <!-- CURRENT WEBSITE -->
+    <section class="page">
+
+        <div class="page-header">
+            <div class="logo">PRIMA<span>LAB</span></div>
+            <div class="page-number">03 / CURRENT WEBSITE ANALYSIS</div>
+        </div>
+
+        <div class="eyebrow">03 — CURRENT STATE ANALYSIS</div>
+        <h2>تحليل الموقع الحالي</h2>
+
+        <p>
+            الموقع الحالي يحتوي على بنية تعريفية وتجارية جيدة كبداية،
+            ويقدم مجموعة من الصفحات التي تغطي الشركة ومنتجاتها وشهاداتها
+            وطرق التواصل.
+        </p>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>Corporate Website</h3>
+                <p>موقع تعريفي للشركة ونشاطها.</p>
+            </div>
+            <div class="card">
+                <h3>Product Catalog</h3>
+                <p>عرض المنتجات وتصنيفاتها وصفحات التفاصيل.</p>
+            </div>
+            <div class="card">
+                <h3>Certification Gallery</h3>
+                <p>عرض شهادات الجودة والاعتمادات.</p>
+            </div>
+            <div class="card">
+                <h3>Contact System</h3>
+                <p>بيانات التواصل ونماذج إرسال الاستفسارات.</p>
+            </div>
+        </div>
+
+        <h3>الأقسام الرئيسية الحالية</h3>
+
+        <table>
+            <tr>
+                <th>القسم</th>
+                <th>المحتوى</th>
+                <th>الغرض</th>
+            </tr>
+            <tr>
+                <td>Home</td>
+                <td>مقدمة وخدمات ومنتجات وأقسام تعريفية.</td>
+                <td>تقديم الشركة.</td>
+            </tr>
+            <tr>
+                <td>About Us</td>
+                <td>نبذة عن الشركة ومرافق الإنتاج.</td>
+                <td>بناء الثقة.</td>
+            </tr>
+            <tr>
+                <td>Products</td>
+                <td>تصنيفات المنتجات وصفحاتها.</td>
+                <td>عرض المنتجات.</td>
+            </tr>
+            <tr>
+                <td>Certification</td>
+                <td>شهادات الجودة.</td>
+                <td>إثبات الالتزام بالمعايير.</td>
+            </tr>
+            <tr>
+                <td>Gallery</td>
+                <td>صور المنتجات والتصنيفات.</td>
+                <td>عرض بصري.</td>
+            </tr>
+            <tr>
+                <td>Contact Us</td>
+                <td>العنوان والهاتف والبريد والنموذج.</td>
+                <td>التواصل التجاري.</td>
+            </tr>
+        </table>
+
+       
+
+        <div class="footer">
+            <span>PRIMALAB PLTC</span>
+            <strong>03</strong>
+        </div>
+    </section>
+
+    <!-- PAGE ANALYSIS -->
+    <section class="page">
+
+        <div class="page-header">
+            <div class="logo">PRIMA<span>LAB</span></div>
+            <div class="page-number">04 / PAGE ANALYSIS</div>
+        </div>
+
+        <div class="eyebrow">04 — WEBSITE CONTENT ANALYSIS</div>
+        <h2>تحليل الصفحات الحالية</h2>
+
+        <h3>1. Home Page</h3>
+        <ul>
+            <li>Header & Navigation.</li>
+            <li>Hero Section والتعريف الرئيسي.</li>
+            <li>Our Services.</li>
+            <li>About Company.</li>
+            <li>Products Preview.</li>
+            <li>FAQ & Testimonials.</li>
+            <li>Request a Quote.</li>
+            <li>How We Work.</li>
+            <li>Partners & Certifications.</li>
+            <li>Footer.</li>
+        </ul>
+
+        <h3>2. About Us</h3>
+        <ul>
+            <li>Company Overview.</li>
+            <li>Production Facilities.</li>
+            <li>Company Quality.</li>
+            <li>Why Choose Us.</li>
+            <li>Team Members.</li>
+            <li>Work Process.</li>
+        </ul>
+
+        <h3>3. Products & Product Details</h3>
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>المحتوى الأساسي المطلوب</th>
+            </tr>
+            <tr>
+                <td>Deicing Salt</td>
+                <td>الاستخدامات والأنواع وأحجام الحبيبات والتعبئة.</td>
+            </tr>
+            <tr>
+                <td>Refined Salt Food Grade</td>
+                <td>النقاء والمواصفات والاستخدامات الغذائية.</td>
+            </tr>
+            <tr>
+                <td>Water Treatment Salt</td>
+                <td>خصائص تليين المياه والاستخدامات.</td>
+            </tr>
+            <tr>
+                <td>Pool Salt</td>
+                <td>مواصفات ملح المسابح وأنظمة الكلور.</td>
+            </tr>
+            <tr>
+                <td>Tablet Salt</td>
+                <td>الأقراص والاستخدامات الصناعية.</td>
+            </tr>
+            <tr>
+                <td>Triple Washed Salt</td>
+                <td>مراحل الغسيل ودرجات النقاء.</td>
+            </tr>
+            <tr>
+                <td>Industrial & Chemical</td>
+                <td>التطبيقات الكيميائية والصناعية.</td>
+            </tr>
+            <tr>
+                <td>Rock Salt</td>
+                <td>ملح صخري لإزالة الجليد.</td>
+            </tr>
+            <tr>
+                <td>Sea Salt</td>
+                <td>ملح بحري لإزالة الجليد.</td>
+            </tr>
+        </table>
+
+        <h3>4. Certification</h3>
+        <p>عرض شهادات ISO 9001 وISO 22000 وISO 14001 وISO 45001، مع التحقق من صلاحية الشهادات وبياناتها قبل نشرها.</p>
+
+        <h3>5. Gallery</h3>
+        <p>تصنيفات الصور، فلترة المنتجات، عرض الصور والتنقل بينها.</p>
+
+        <h3>6. Contact Us</h3>
+        <p>بيانات الشركة، Google Maps، الهاتف، البريد الإلكتروني ونموذج التواصل.</p>
+
+        <div class="footer">
+            <span>PRIMALAB PLTC</span>
+            <strong>04</strong>
+        </div>
+    </section>
+
+    <!-- CHALLENGES -->
+    <section class="page">
+
+        <div class="page-header">
+            <div class="logo">PRIMA<span>LAB</span></div>
+            <div class="page-number">05 / GAP ANALYSIS</div>
+        </div>
+
+        <div class="eyebrow">05 — BUSINESS CHALLENGES & OPPORTUNITIES</div>
+        <h2>تحليل الفجوات وفرص التطوير</h2>
+
+        <table>
+            <tr>
+                <th>الوضع الحالي / الملاحظة</th>
+                <th>التطوير المقترح</th>
+                <th>القيمة المضافة</th>
+            </tr>
+            <tr>
+                <td>وجود محتوى تجريبي من القالب.</td>
+                <td>إعادة كتابة المحتوى التجاري.</td>
+                <td>مصداقية واحترافية.</td>
+            </tr>
+            <tr>
+                <td>عرض المنتجات بصورة تقليدية.</td>
+                <td>Product Catalog متكامل.</td>
+                <td>تسهيل اتخاذ قرار العميل.</td>
+            </tr>
+            <tr>
+                <td>عدم وجود حسابات عملاء متكاملة.</td>
+                <td>Sign Up / Login / Customer Portal.</td>
+                <td>إدارة العلاقات مع العملاء.</td>
+            </tr>
+            <tr>
+                <td>الاعتماد على نماذج التواصل فقط.</td>
+                <td>Quotation & Inquiry Management.</td>
+                <td>متابعة فرص البيع.</td>
+            </tr>
+            <tr>
+                <td>عدم وجود إدارة مركزية متكاملة.</td>
+                <td>Admin Dashboard.</td>
+                <td>سهولة إدارة الموقع.</td>
+            </tr>
+            <tr>
+                <td>عرض محدود للبيانات التجارية.</td>
+                <td>Reports & Analytics.</td>
+                <td>دعم القرارات.</td>
+            </tr>
+        </table>
+
+        <h3>أهم المشكلات التي تحتاج إلى معالجة</h3>
+        <ul>
+            <li>مراجعة المحتوى غير المرتبط بنشاط الشركة.</li>
+            <li>مراجعة الأرقام والإحصائيات التجريبية.</li>
+            <li>توحيد تصنيفات المنتجات بين الصفحة الرئيسية وصفحة المنتجات.</li>
+            <li>تحسين التنقل بين الصفحات.</li>
+            <li>توحيد بيانات التواصل.</li>
+            <li>تحسين عرض المواصفات الفنية وملفات المنتجات.</li>
+            <li>تحسين تجربة المستخدم على الهواتف.</li>
+        </ul>
+
+        <div class="highlight">
+            <h3>Transformation Opportunity مستقبلا</h3>
+            <p>
+                الانتقال من موقع يعرض المعلومات فقط إلى منصة رقمية
+                تساعد الشركة على استقبال العملاء، وتنظيم طلباتهم،
+                وإدارة المحتوى والمنتجات، وقياس الأداء.
+            </p>
+        </div>
+
+        <div class="footer">
+            <span>PRIMALAB PLTC</span>
+            <strong>05</strong>
+        </div>
+    </section>
+
+    <!-- NEW ARCHITECTURE -->
+    <section class="page">
+
+        <div class="page-header">
+            <div class="logo">PRIMA<span>LAB</span></div>
+            <div class="page-number">06 / PROPOSED ARCHITECTURE</div>
+        </div>
+
+        <div class="eyebrow">06 — PROPOSED WEBSITE STRUCTURE</div>
+        <h2>الهيكل المقترح للموقع الجديد</h2>
+
+        <div class="sitemap">
+            AL MOKHTAR DIGITAL PLATFORM
+            │
+            ├── PUBLIC WEBSITE
+            │ ├── Home
+            │ ├── About Us
+            │ │ ├── Company Overview
+            │ │ ├── Our Facilities
+            │ │ ├── Quality & Production
+            │ │ └── Why Choose Us
+            │ │
+            │ ├── Products
+            │ │ ├── Product Categories
+            │ │ ├── Product Details
+            │ │ ├── Technical Specifications
+            │ │ └── Download Datasheet
+            │ │
+            │ ├── Quality & Certifications
+            │ ├── Gallery
+            │ ├── Industries & Applications
+            │ ├── Contact Us
+            │ └── Request a Quote
+            │
+            ├── CUSTOMER PORTAL
+            │ ├── Sign Up
+            │ ├── Login
+            │ ├── My Profile
+            │ ├── My Inquiries
+            │ ├── My Quotations
+            │ └── Notifications
+            │
+            └── ADMIN DASHBOARD
+            ├── Overview
+            ├── Products Management
+            ├── Categories Management
+            ├── Customer Management
+            ├── Inquiry Management
+            ├── Quotation Management
+            ├── Gallery Management
+            ├── Certifications Management
+            ├── Content Management
+            ├── Users & Roles
+            └── Reports & Settings
+        </div>
+
+        <h3>الصفحات المقترحة الإضافية</h3>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>Industries & Applications</h3>
+                <p>توضيح القطاعات التي تستخدم منتجات الشركة.</p>
+            </div>
+            <div class="card">
+                <h3>Technical Resources</h3>
+                <p>تحميل ملفات المواصفات الفنية والكتالوجات.</p>
+            </div>
+            <div class="card">
+                <h3>Export & Logistics</h3>
+                <p>معلومات التعبئة والشحن والتوريد والتصدير.</p>
+            </div>
+            <div class="card">
+                <h3>Request a Quote</h3>
+                <p>نموذج تجاري منظم لطلبات عروض الأسعار.</p>
+            </div>
+        </div>
+
+        <div class="note">
+            الهيكل المقترح قابل للتعديل وفقًا لمراجعة إدارة شركة المختار
+            واعتماد المحتوى النهائي والوظائف المطلوبة.
+        </div>
+
+        <div class="footer">
+            <span>PRIMALAB PLTC</span>
+            <strong>06</strong>
+        </div>
+    </section>
+
+    <!-- CUSTOMER PORTAL -->
+    <section class="page">
+
+        <div class="page-header">
+            <div class="logo">PRIMA<span>LAB</span></div>
+            <div class="page-number">07 / CUSTOMER PORTAL</div>
+        </div>
+
+        <div class="eyebrow">07 — CUSTOMER EXPERIENCE</div>
+        <h2>نظام تسجيل ودخول العملاء</h2>
+
+        <p>
+            من المقترح إضافة نظام حسابات عملاء يسمح للزائر بإنشاء حساب،
+            ثم استخدام الحساب لمتابعة طلبات التواصل وعروض الأسعار.
+        </p>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>Sign Up</h3>
+                <p>إنشاء حساب جديد باستخدام بيانات العميل.</p>
+            </div>
+            <div class="card">
+                <h3>Login</h3>
+                <p>تسجيل الدخول والتحقق من بيانات الحساب.</p>
+            </div>
+            <div class="card">
+                <h3>Forgot Password</h3>
+                <p>استعادة كلمة المرور بطريقة آمنة.</p>
+            </div>
+            <div class="card">
+                <h3>Customer Profile</h3>
+                <p>إدارة بيانات العميل ووسائل التواصل.</p>
+            </div>
+        </div>
+
+        <h3>بيانات التسجيل المقترحة</h3>
+        <table>
+            <tr>
+                <th>Field</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Full Name</td>
+                <td>اسم العميل أو ممثل الشركة.</td>
+            </tr>
+            <tr>
+                <td>Email Address</td>
+                <td>البريد الإلكتروني.</td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td>رقم الهاتف مع كود الدولة.</td>
+            </tr>
+            <tr>
+                <td>Company Name</td>
+                <td>اسم المؤسسة أو الشركة.</td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td>الدولة.</td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>كلمة المرور.</td>
+            </tr>
+            <tr>
+                <td>Confirm Password</td>
+                <td>تأكيد كلمة المرور.</td>
+            </tr>
+        </table>
+
+        <h3>Customer Dashboard</h3>
+        <ul>
+            <li>عرض بيانات الحساب.</li>
+            <li>تعديل الملف الشخصي.</li>
+            <li>عرض المنتجات المفضلة إن تم اعتماد الخاصية.</li>
+            <li>إرسال استفسار عن منتج.</li>
+            <li>إرسال طلب عرض سعر.</li>
+            <li>متابعة حالة الطلب.</li>
+            <li>عرض سجل الاستفسارات السابقة.</li>
+            <li>استقبال إشعارات بتحديث حالة الطلب.</li>
+        </ul>
+
+        <div class="note">
+            التسجيل لا يعني وجود عملية شراء أو دفع إلكتروني في المرحلة الأولى.
+            النظام المقترح يعتمد على طلبات الاستفسار وعروض الأسعار
+            ومتابعتها من خلال فريق الشركة.
+        </div>
+
+        <div class="footer">
+            <span>PRIMALAB PLTC</span>
+            <strong>07</strong>
+        </div>
+    </section>
+
+    <!-- ADMIN DASHBOARD -->
+    <section class="page">
+
+        <div class="page-header">
+            <div class="logo">PRIMA<span>LAB</span></div>
+            <div class="page-number">08 / ADMIN DASHBOARD</div>
+        </div>
+
+        <div class="eyebrow">08 — MANAGEMENT SYSTEM</div>
+        <h2>لوحة تحكم الإدارة</h2>
+
+        <p>
+            لوحة تحكم مركزية تتيح لفريق شركة المختار إدارة محتوى الموقع
+            ومتابعة العملاء والطلبات دون الحاجة إلى تعديل الكود البرمجي.
+        </p>
+
+        <h3>Dashboard Overview</h3>
+        <div class="card-grid">
+            <div class="card">
+                <div class="icon">01</div>
+                <h3>Total Products</h3>
+                <p>عدد المنتجات والتصنيفات.</p>
+            </div>
+            <div class="card">
+                <div class="icon">02</div>
+                <h3>Total Customers</h3>
+                <p>عدد حسابات العملاء.</p>
+            </div>
+            <div class="card">
+                <div class="icon">03</div>
+                <h3>New Inquiries</h3>
+                <p>الاستفسارات الجديدة.</p>
+            </div>
+            <div class="card">
+                <div class="icon">04</div>
+                <h3>Pending Quotes</h3>
+                <p>طلبات عروض الأسعار المعلقة.</p>
+            </div>
+        </div>
+
+        <h3>Admin Modules</h3>
+        <table>
+            <tr>
+                <th>Module</th>
+                <th>الوظائف</th>
+            </tr>
+            <tr>
+                <td>Products</td>
+                <td>Add / Edit / Delete / Publish / Archive.</td>
+            </tr>
+            <tr>
+                <td>Categories</td>
+                <td>إدارة تصنيفات المنتجات وترتيبها.</td>
+            </tr>
+            <tr>
+                <td>Customers</td>
+                <td>عرض وإدارة حسابات العملاء.</td>
+            </tr>
+            <tr>
+                <td>Inquiries</td>
+                <td>استقبال الاستفسارات وتحديث حالتها.</td>
+            </tr>
+            <tr>
+                <td>Quotations</td>
+                <td>إدارة طلبات عروض الأسعار والردود.</td>
+            </tr>
+            <tr>
+                <td>Gallery</td>
+                <td>رفع الصور وتنظيمها وتصنيفها.</td>
+            </tr>
+            <tr>
+                <td>Certifications</td>
+                <td>إضافة الشهادات وتعديلها وتحديث صلاحيتها.</td>
+            </tr>
+            <tr>
+                <td>Content</td>
+                <td>إدارة الصفحات الرئيسية والنصوص.</td>
+            </tr>
+            <tr>
+                <td>Users & Roles</td>
+                <td>إدارة الموظفين والصلاحيات.</td>
+            </tr>
+            <tr>
+                <td>Reports</td>
+                <td>تقارير العملاء والمنتجات والطلبات.</td>
+            </tr>
+        </table>
+
+        <h3>Roles & Permissions</h3>
+        <ul>
+            <li>Super Admin: صلاحيات كاملة.</li>
+            <li>Content Manager: إدارة الصفحات والمحتوى.</li>
+            <li>Product Manager: إدارة المنتجات والمواصفات.</li>
+            <li>Sales Manager: إدارة الاستفسارات وعروض الأسعار.</li>
+        </ul>
+
+        <div class="highlight">
+            <h3>Centralized Management</h3>
+            <p>
+                جميع بيانات الموقع والمنتجات والعملاء والطلبات يتم إدارتها
+                من خلال نظام مركزي مع تحديد صلاحيات كل مستخدم.
+            </p>
+        </div>
+
+        <div class="footer">
+            <span>PRIMALAB PLTC</span>
+            <strong>08</strong>
+        </div>
+    </section>
+
+    <!-- FUNCTIONAL SRS -->
+  
+    <!-- MORE SRS -->
+    <section class="page">
+
+        <div class="page-header">
+            <div class="logo">PRIMA<span>LAB</span></div>
+            <div class="page-number">10 / FUNCTIONAL SRS</div>
+        </div>
+
+        <div class="eyebrow">10 — FUNCTIONAL REQUIREMENTS</div>
+        <h2>متطلبات الوظائف الإضافية</h2>
+
+        <h3>FR-06: Content Management</h3>
+        <ul>
+            <li>تعديل محتوى الصفحة الرئيسية.</li>
+            <li>إدارة صفحة About Us.</li>
+            <li>إدارة الأسئلة الشائعة.</li>
+            <li>إدارة بيانات التواصل.</li>
+            <li>إدارة محتوى الأقسام التعريفية.</li>
+        </ul>
+
+        <h3>FR-07: Gallery Management</h3>
+        <ul>
+            <li>إضافة صور جديدة.</li>
+            <li>تحديد تصنيف كل صورة.</li>
+            <li>تعديل وحذف الصور.</li>
+            <li>تحديد الصور المنشورة.</li>
+        </ul>
+
+        <h3>FR-08: Certification Management</h3>
+        <ul>
+            <li>إضافة شهادات جديدة.</li>
+            <li>رفع صورة الشهادة أو ملفها.</li>
+            <li>إضافة رقم الشهادة والجهة المانحة.</li>
+            <li>تسجيل تاريخ الإصدار والانتهاء إن وجد.</li>
+        </ul>
+
+        <h3>FR-09: Reports</h3>
+        <ul>
+            <li>إحصائيات تسجيل العملاء.</li>
+            <li>عدد الاستفسارات حسب الفترة.</li>
+            <li>عدد طلبات عروض الأسعار.</li>
+            <li>المنتجات الأكثر استفسارًا.</li>
+            <li>حالات الطلبات.</li>
+        </ul>
+
+        <h3>FR-10: Search & Navigation</h3>
+        <ul>
+            <li>البحث عن المنتجات.</li>
+            <li>فلترة المنتجات حسب التصنيف.</li>
+            <li>التنقل بين صفحات الموقع.</li>
+            <li>عرض المنتجات ذات الصلة.</li>
+        </ul>
+
+        <h3>FR-11: Notifications</h3>
+        <ul>
+            <li>إشعار الإدارة عند وصول طلب جديد.</li>
+            <li>إشعار العميل عند تحديث حالة طلبه.</li>
+            <li>إمكانية إرسال إشعارات البريد الإلكتروني.</li>
+        </ul>
+
+        <div class="highlight">
+            <h3>Business Workflow</h3>
+            <div class="flow">
+                <div class="flow-item">Customer</div>
+                <span class="flow-arrow">←</span>
+                <div class="flow-item">Inquiry</div>
+                <span class="flow-arrow">←</span>
+                <div class="flow-item">Admin Review</div>
+                <span class="flow-arrow">←</span>
+                <div class="flow-item">Quotation</div>
+            </div>
+            <p>
+                دورة العمل المقترحة تبدأ من إرسال العميل للطلب،
+                ثم مراجعته بواسطة الموظف المختص، ثم إعداد الرد أو عرض السعر
+                ومتابعة حالة الطلب.
+            </p>
+        </div>
+
+        <div class="footer">
+            <span>PRIMALAB PLTC</span>
+            <strong>10</strong>
+        </div>
+    </section>
+
+    <!-- NON FUNCTIONAL -->
+    <section class="page">
+
+        <div class="page-header">
+            <div class="logo">PRIMA<span>LAB</span></div>
+            <div class="page-number">11 / NON-FUNCTIONAL REQUIREMENTS</div>
+        </div>
+
+        <div class="eyebrow">11 — SYSTEM QUALITY ATTRIBUTES</div>
+        <h2>المتطلبات غير الوظيفية</h2>
+
+        <p>
+            لا يقتصر نجاح النظام على تنفيذ الوظائف فقط؛ بل يجب أن يتمتع
+            بالسرعة والأمان والاستقرار وسهولة الاستخدام وقابلية التوسع.
+        </p>
+
+        <table>
+            <tr>
+                <th>Requirement</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Performance</td>
+                <td>تحميل الصفحات بسرعة وتحسين الصور والملفات.</td>
+            </tr>
+            <tr>
+                <td>Security</td>
+                <td>حماية الحسابات والبيانات ومنع الوصول غير المصرح به.</td>
+            </tr>
+            <tr>
+                <td>Responsive Design</td>
+                <td>التوافق مع الهواتف والأجهزة اللوحية والحواسيب.</td>
+            </tr>
+            <tr>
+                <td>Scalability</td>
+                <td>إمكانية إضافة منتجات ووظائف جديدة مستقبلًا.</td>
+            </tr>
+            <tr>
+                <td>Availability</td>
+                <td>استقرار الخدمة ومتابعة النسخ الاحتياطية.</td>
+            </tr>
+            <tr>
+                <td>Usability</td>
+                <td>سهولة استخدام الموقع ولوحة التحكم.</td>
+            </tr>
+            <tr>
+                <td>Maintainability</td>
+                <td>سهولة صيانة النظام وتطويره.</td>
+            </tr>
+            <tr>
+                <td>SEO</td>
+                <td>تهيئة الصفحات لمحركات البحث.</td>
+            </tr>
+            <tr>
+                <td>Accessibility</td>
+                <td>تحسين وضوح المحتوى وسهولة التفاعل.</td>
+            </tr>
+            <tr>
+                <td>Localization</td>
+                <td>دعم اللغات المعتمدة واتجاهات الكتابة.</td>
+            </tr>
+        </table>
+
+        <h3>Security Requirements</h3>
+        <ul>
+            <li>استخدام HTTPS.</li>
+            <li>تخزين كلمات المرور باستخدام Password Hashing آمن.</li>
+            <li>التحقق من صلاحيات المستخدم في كل عملية.</li>
+            <li>منع محاولات الوصول إلى صفحات الإدارة بدون صلاحية.</li>
+            <li>التحقق من الملفات المرفوعة وأنواعها وأحجامها.</li>
+            <li>حماية النماذج من الإدخال غير الآمن.</li>
+            <li>تسجيل العمليات الإدارية المهمة Audit Logs.</li>
+            <li>تطبيق سياسات النسخ الاحتياطي.</li>
+        </ul>
+
+        <div class="warning">
+            يجب ألا يعتمد النظام على إخفاء أزرار الإدارة في الواجهة فقط؛
+            بل يجب التحقق من الصلاحيات على مستوى الخادم وقاعدة البيانات.
+        </div>
+
+        <div class="footer">
+            <span>PRIMALAB PLTC</span>
+            <strong>11</strong>
+        </div>
+    </section>
+
+    <!-- DATABASE -->
+    
+      
+    <!-- UX -->
+    <section class="page">
+
+        <div class="page-header">
+            <div class="logo">PRIMA<span>LAB</span></div>
+            <div class="page-number">13 / UI & UX STRATEGY</div>
+        </div>
+
+        <div class="eyebrow">13 — DESIGN STRATEGY</div>
+        <h2>استراتيجية التصميم وتجربة المستخدم</h2>
+
+        <p>
+            يجب أن يعكس التصميم الجديد طبيعة شركة صناعية وتصديرية،
+            وأن يركز على المنتجات والجودة والثقة وسهولة الوصول للمعلومات.
+        </p>
+
+        <h3>Visual Identity Direction</h3>
+
+        <div class="card-grid">
+            <div class="card">
+                <div style="height:45px;background:#102B40;border-radius:8px"></div>
+                <h3>Navy Blue</h3>
+                <p>#102B40 – الثقة والاحترافية.</p>
+            </div>
+            <div class="card">
+                <div style="height:45px;background:#13A89E;border-radius:8px"></div>
+                <h3>Teal</h3>
+                <p>#13A89E – الحداثة والتفاعل.</p>
+            </div>
+            <div class="card">
+                <div style="height:45px;background:#D9AD61;border-radius:8px"></div>
+                <h3>Gold</h3>
+                <p>#D9AD61 – التميز والجودة.</p>
+            </div>
+            <div class="card">
+                <div style="height:45px;background:#F3F6F8;border:1px solid #ddd;border-radius:8px"></div>
+                <h3>Light Gray</h3>
+                <p>#F3F6F8 – البساطة والوضوح.</p>
+            </div>
+        </div>
+
+        <h3>Home Page Experience</h3>
+        <ol>
+            <li>Hero Section بصورة صناعية احترافية ورسالة واضحة.</li>
+            <li>نبذة مختصرة عن الشركة وقدراتها.</li>
+            <li>تصنيفات المنتجات الرئيسية.</li>
+            <li>عرض مميزات الإنتاج والجودة.</li>
+            <li>الصناعات التي تخدمها الشركة.</li>
+            <li>الشهادات والاعتمادات.</li>
+            <li>صور المصانع والمنتجات.</li>
+            <li>Call To Action لطلب عرض سعر.</li>
+        </ol>
+
+        <h3>Product Details Experience</h3>
+        <ul>
+            <li>صورة رئيسية واضحة للمنتج.</li>
+            <li>اسم المنتج ووصفه التجاري.</li>
+            <li>الاستخدامات الصناعية.</li>
+            <li>المواصفات الفنية في جدول.</li>
+            <li>أنواع التعبئة المتاحة.</li>
+            <li>ملفات المواصفات القابلة للتحميل.</li>
+            <li>منتجات مشابهة.</li>
+            <li>زر Request a Quote واضح.</li>
+        </ul>
+
+        
+
+        <div class="footer">
+            <span>PRIMALAB PLTC</span>
+            <strong>13</strong>
+        </div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section class="page">
+
+        <div class="page-header">
+            <div class="logo">PRIMA<span>LAB</span></div>
+            <div class="page-number">14 / DEVELOPMENT ROADMAP</div>
+        </div>
+
+        <div class="eyebrow">14 — PROJECT EXECUTION PLAN</div>
+        <h2>خطة تنفيذ المشروع</h2>
+
+        <p>
+            يتم تقسيم العمل إلى مراحل واضحة تضمن مراجعة المتطلبات
+            واعتماد التصميم ثم التنفيذ والاختبار والتسليم.
+        </p>
+
+        <table>
+            <tr>
+                <th>Phase</th>
+                <th>المهام</th>
+                <th>المخرجات</th>
+            </tr>
+            <tr>
+                <td>01 – Discovery</td>
+                <td>جمع المتطلبات ومراجعة المحتوى ومناقشة احتياجات الشركة.</td>
+                <td>Approved Requirements</td>
+            </tr>
+            <tr>
+                <td>02 – UX/UI</td>
+                <td>تصميم الصفحات الرئيسية والداخلية ولوحات التحكم.</td>
+                <td>UI/UX Design</td>
+            </tr>
+            <tr>
+                <td>03 – Architecture</td>
+                <td>تصميم قاعدة البيانات وتحديد العلاقات والصلاحيات.</td>
+                <td>System Architecture</td>
+            </tr>
+            <tr>
+                <td>04 – Development</td>
+                <td>تنفيذ الموقع ونظام الحسابات ولوحات الإدارة.</td>
+                <td>Working Application</td>
+            </tr>
+            <tr>
+                <td>05 – Integration</td>
+                <td>ربط النماذج والطلبات والإشعارات.</td>
+                <td>Integrated System</td>
+            </tr>
+            <tr>
+                <td>06 – Testing</td>
+                <td>اختبار الوظائف والأمان والأداء والتوافق.</td>
+                <td>Tested Application</td>
+            </tr>
+            <tr>
+                <td>07 – Deployment</td>
+                <td>النشر والإعداد والتدريب والتسليم.</td>
+                <td>Production Release</td>
+            </tr>
+        </table>
+
+       
+        </div>
+
+        
+
+        <div class="footer">
+            <span>PRIMALAB PLTC</span>
+            <strong>14</strong>
+        </div>
+    </section>
+
+    
+
+    <!-- DELIVERABLES -->
+    <section class="page">
+
+        <div class="page-header">
+            <div class="logo">PRIMA<span>LAB</span></div>
+            <div class="page-number">16 / DELIVERABLES</div>
+        </div>
+
+        <div class="eyebrow">16 — PROJECT DELIVERABLES</div>
+        <h2>المخرجات النهائية للمشروع</h2>
+
+        <p>
+            بعد الانتهاء من التنفيذ والاختبارات، يتم تسليم المخرجات
+            التي يتم اعتمادها ضمن نطاق المشروع.
+        </p>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>01. Corporate Website</h3>
+                <p>الموقع التعريفي والتجاري الجديد.</p>
+            </div>
+            <div class="card">
+                <h3>02. Customer Portal</h3>
+                <p>نظام حسابات العملاء والاستفسارات.</p>
+            </div>
+            <div class="card">
+                <h3>03. Admin Dashboard</h3>
+                <p>لوحة إدارة الموقع والبيانات.</p>
+            </div>
+            <div class="card">
+                <h3>04. Database</h3>
+                <p>قاعدة البيانات والعلاقات المعتمدة.</p>
+            </div>
+            <div class="card">
+                <h3>05. Technical Documentation</h3>
+                <p>توثيق المتطلبات والوظائف.</p>
+            </div>
+            <div class="card">
+                <h3>06. Testing Report</h3>
+                <p>نتائج الاختبارات والاعتماد.</p>
+            </div>
+        </div>
+
+        <h3>Future Development Opportunities</h3>
+        <ul>
+            <li>Multi-language Content Management.</li>
+            <li>International Customer Management.</li>
+            <li>Advanced CRM Features.</li>
+            <li>Automated Email Notifications.</li>
+            <li>Advanced Business Analytics.</li>
+            <li>ERP Integration.</li>
+            <li>Inventory & Production Integration.</li>
+            <li>Online Payment & E-Commerce إذا تقرر اعتمادهما.</li>
+            <li>AI-Based Customer Support في مرحلة مستقبلية.</li>
+        </ul>
+
+        <div class="note">
+            هذه الوظائف تمثل فرصًا مستقبلية وليست جميعها ضمن المرحلة الأولى.
+            يجب اعتماد أي توسع إضافي بشكل مستقل.
+        </div>
+
+        <div class="footer">
+            <span>PRIMALAB PLTC</span>
+            <strong>16</strong>
+        </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="page cover">
+
+        <div class="cover-top">
+
+            <div class="brand">PRIMA<span>LAB</span></div>
+
+            <div class="gold-line"></div>
+
+            <div class="cover-tag">OUR COMMITMENT</div>
+
+            <h1>
+                From Digital<br>
+                Presence to<br>
+                <span>Business Growth.</span>
+            </h1>
+
+            <p class="cover-description">
+                A structured digital platform designed to present
+                Al Mokhtar's capabilities, connect with customers,
+                and support future business growth.
+            </p>
+
+            <div class="cover-middle">
+                <strong>Prepared & Presented By</strong><br>
+                Eng. Dina El-Ziny<br>
+                CEO & Founder – PrimaLAB Academy<br>
+                CEO & Founder – PrimaLAB Software Solutions
+            </div>
+
+        </div>
+
+        <div class="cover-bottom">
+            <h3 style="color:#53CFC3">PRIMALAB PLTC</h3>
+            <p style="color:#D1E0E5;font-size:12px">
+                • Information Technology • Artificial Intelligence
+            </p>
+            <div class="cover-meta">
+                <span>AL MOKHTAR DIGITAL TRANSFORMATION PROJECT</span>
+                <span>END OF DOCUMENT</span>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
